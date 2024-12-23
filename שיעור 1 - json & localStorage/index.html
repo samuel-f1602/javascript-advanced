@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>storages & json </title>
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <h1 id="title">Hello</h1>
+    <input type="text" id="name">
+    <button onclick="save()">save
+    </button>
+
+    <br><br>
+    <select id="colors" onchange="pickColor()">
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+        <option value="black">black</option>
+    </select>
+    <h1>colors</h1>
+    <ul id="list">
+        <!-- insert picked colors here on colors select change-->
+    </ul>
+</body>
+
+</html>
