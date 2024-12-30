@@ -202,3 +202,19 @@ try {
     console.log(num1 + 1000);
     msg = "";
 }
+
+console.log("** Throw **");
+
+const divide = (num1, num2) => {
+    try {
+        if (num2 === 0) {
+            throw new Error("Cannot divide by zero");
+        }
+        return num1 / num2;
+    } catch (err) {
+        return err.message;
+    }
+}
+
+console.log(divide(10, 0)); // Uncaught Error: Cannot divide by zero
+console.log(divide(10, 2)); // 5
