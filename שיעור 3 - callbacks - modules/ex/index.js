@@ -1,1 +1,2 @@
-import { changeName, printName } from "./ex";
+import { changeName, printName } from "./ex.js";
+printName();

@@ -8,7 +8,7 @@ import - export ע״י
 export { changeCar, printCar };
 לדוגמא import ובקובץ הראשי נכניס
 */
-import { changeCar, printCar } from "./car";
+import { changeCar, printCar } from "./car.js";
 //נוסף attribute אבל כדי שזה יעבוד נצטרך להוסיף
 //script ב type="module" והוא html במסמך 
 //לדוגמא
