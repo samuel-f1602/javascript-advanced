@@ -215,3 +215,44 @@ class person {
 //זה לא ייתן לי לשנות אותו זה יהיה לא חוקי שמתי עליו אבטחה כדי שלא יהיה ניתן לשנות אותו מבחוץ
 //private הצרנו על אותו משתנה שהוא פרטי
 //bob.#id = 50;
+
+const moe = {
+    firstName: 'Moe', lastName: 'Doe',
+    email: 'moe@email.com'
+}
+console.log(moe);
+moe.age = 25;
+console.log(moe);
+
+console.log("** הכמסה/כימוס - encapsulation **");
+//זה בעצם נותן לי להראות למשתמש רק מה שהוא צריך לראות מה שלא רלוונטי אליו אני מחמיס
+//לדוגמא שעון יד אנחנו רואים רק את הפונקציונליות של המחוגים של השעה והדקות זזים מה שקורה בפנים החמיסו לנו
+
+console.log("** inheritence **");
+person.getPeople();
+//והיא יורשת user יש לנו דבר כזה שנקרא
+//person ממחלקת
+//password בנוסף לכל יש לה userל
+//זה ההבדל ביניהם
+//במקום לכתוב מחדש את כל הקוד אנחנו ניצור מחלקת  personeשהיא יורשת מ
+//והיא מרחיבה בעצם מוסיפה סיסמא
+
+//וככה עושים את זה יש מילה שמורה להרחבה
+
+//super constructor כדי שזה יעבוד יש משהו שנקרא
+//כדי לא לדרוס constructor הוא נותן לנו להוסיף
+//את הקודם
+//אבל עדייו נצטרך לתת את הפרמטרים אבל עם הרחבה של הסיסמא
+//של האבא constructorזה ה super
+class User extends person {
+    password;
+
+    constructor(firstName, lastName, age, email, password) {
+        super(firstName, lastName, age, email);
+        this.password = password;
+    }
+}
+
+const user = new User('User', 'Name', 30, 'user@email.com', "1234");
+console.log(user);
+
